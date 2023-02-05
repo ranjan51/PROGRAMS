@@ -1,0 +1,13 @@
+def diagonalDifference(arr):
+    # Write your code here
+    left = 0
+    right = 0
+    for i in range(len(arr)):
+        for j in range(i,i+1):
+            left += arr[i][j]
+    ctr = len(arr)
+    for k in range(len(arr)):
+        ctr = ctr-1
+        right += arr[k][ctr]
+    #return abs(left - right)
+    return abs(right - left)
